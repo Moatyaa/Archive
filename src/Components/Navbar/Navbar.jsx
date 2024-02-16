@@ -46,6 +46,7 @@ export default function Navbar() {
                 menu={menuProps}
                 placement="bottom"
                 icon={<UserOutlined />}
+                className="nav-ant-btn"
               >
                 {firstName}
               </Dropdown.Button>
@@ -55,7 +56,7 @@ export default function Navbar() {
           <div className="text-sec d-flex w-100 justify-content-between align-items-center">
             <div>
               <h4 className="fw">
-                <a className="text-sec  " href="#">
+                <a className="text-sec" href="#">
                   إدارة نوادي وفنادق ق.م
                 </a>
               </h4>

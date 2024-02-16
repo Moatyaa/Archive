@@ -8,37 +8,39 @@ import UserContextProvider from "./Context/UserContext"
 import Control from "./Components/Control/Control"
 
 
-export default function App(){
-let router = createBrowserRouter([{path : '', element: <Layout/>, children:[
-  {
-    path: "home",
-     element: 
-         <ProtectedRoute><Home/></ProtectedRoute>
-     
-  },
-  {
-    path: "control",
-     element: 
-         <ProtectedRoute><Control/></ProtectedRoute>
-     
-  },{
-    index: true,
-     element: 
-         <Cover/>
-   },{
-  },{
-    path: "cover",
-     element: 
-         <Cover/>
-   },{
-    path: 'login', 
-    element: <Login/>
-   }
-]}])
+export default function App() {
+  let router = createBrowserRouter([{
+    path: '', element: <Layout />, children: [
+      {
+        path: "home",
+        element:
+          <ProtectedRoute><Home /></ProtectedRoute>
+
+      },
+      {
+        path: "control",
+        element:
+          <ProtectedRoute><Control /></ProtectedRoute>
+
+      }, {
+        index: true,
+        element:
+          <Cover />
+      }, {
+      }, {
+        path: "cover",
+        element:
+          <Cover />
+      }, {
+        path: 'login',
+        element: <Login />
+      }
+    ]
+  }])
   return <>
-  <UserContextProvider>
+    <UserContextProvider>
       <RouterProvider router={router} >
       </RouterProvider>
-  </UserContextProvider>
+    </UserContextProvider>
   </>
 }

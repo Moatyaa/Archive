@@ -1,8 +1,8 @@
 import React from "react";
 import { Tabs } from "antd";
-import cover from "../../Assets/copy.gif";
 import Departments from "../Departments/Departments";
-
+import Users from "../Users/Users";
+import Path from "../Path/Path";
 export default function Control() {
   const items = [
     {
@@ -13,21 +13,18 @@ export default function Control() {
     {
       key: "2",
       label: "المستخدمين",
-      children: "Content of Tab Pane 2",
+      children: <Users />,
     },
     {
       key: "3",
       label: "مسار الأرشيف",
-      children: "Content of Tab Pane 3",
+      children: <Path />,
     },
   ];
   return (
     <>
       <div className="container">
         <Tabs className="direction mt-5" defaultActiveKey="1" items={items} />
-        <div className="position-fixied-bottom image-holder text-center mt-5">
-          <img className="w-25" src={cover} alt="" />
-        </div>
       </div>
     </>
   );
